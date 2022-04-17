@@ -17,7 +17,7 @@ const OverViewContainer = (props) => {
           description="You have nothing to be scared about, we got you covered."
           style={styles.introItem}
         />
-        <Button title="Start banking" />
+        <Button title="Start banking" titleStyle={styles.startBanking}/>
       </View>
     </ImageBackground>
   );

@@ -3,6 +3,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import { useFonts } from 'expo-font';
 
 import OverView from './src/screens/OverView';
+import Home from './src/screens/Home';
 
 export default function App() {
 
@@ -17,7 +18,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <OverView />
+      <Home />
     </View>
   );
 }
@@ -25,8 +26,5 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
 });

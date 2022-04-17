@@ -23,6 +23,10 @@ const styles = StyleSheet.create({
   indicator: {
     marginBottom: 16,
   },
+  startBanking: {
+    color: "#17288E",
+    fontSize: 16,
+  },
 });
 
 export default styles;
