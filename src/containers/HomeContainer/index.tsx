@@ -1,18 +1,20 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { View } from "react-native";
+import BottomSheet from "@gorhom/bottom-sheet";
 
 import Svg from "../../../assets/svg";
 import Button from "../../components/Button";
 import MyTransaction from "../../components/MyTransaction";
 import TextView from "../../components/TextView";
-import TransactionItem from "../../components/TransactionItem";
-import { TRANSACTION_TYPE } from "../../utils/transactions";
 import styles from "./styles";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 const AmountIcon = Svg.amount;
 const MenuIcon = Svg.menu;
 
 const HomeContainer = () => {
+  const snapPoints = useMemo(() => ["8%", "90%"], []);
+
   return (
     <View style={styles.root}>
       <View style={styles.header}>
@@ -40,7 +42,20 @@ const HomeContainer = () => {
           titleStyle={styles.moneyTitle}
         />
       </View>
-      <MyTransaction style={styles.transactions}/>
+      <GestureHandlerRootView style={styles.full}>
+        <BottomSheet
+          index={1}
+          snapPoints={snapPoints}
+          backgroundComponent={() => <View />}
+          handleComponent={() => (
+            <View style={styles.handle}>
+              <View style={styles.handleBar} />
+            </View>
+          )}
+        >
+          <MyTransaction style={styles.transactions} />
+        </BottomSheet>
+      </GestureHandlerRootView>
     </View>
   );
 };

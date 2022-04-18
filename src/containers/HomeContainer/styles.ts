@@ -67,6 +67,22 @@ const styles = StyleSheet.create({
   transactions: {
     paddingHorizontal: 16,
   },
+  handleBar: {
+    height: 7,
+    width: 64,
+    backgroundColor: "#4E589F",
+    borderRadius: 10,
+  },
+  handle: {
+    backgroundColor: "#10194E",
+    borderTopRightRadius: 40,
+    borderTopLeftRadius: 40,
+    alignItems: "center",
+    justifyContent: "center",
+    paddingTop: 16,
+    paddingBottom: 24,
+    marginBottom: -1,
+  },
 });
 
 export default styles;

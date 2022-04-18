@@ -1,9 +1,11 @@
+import { BottomSheetFlatList } from "@gorhom/bottom-sheet";
 import React from "react";
 import { FlatList, StyleSheet, View } from "react-native";
 import Images from "../../assets/images";
 
 import Svg from "../../assets/svg";
 import mockData from "../mock/transactions.json";
+import colors from "../utils/color";
 import { TRANSACTION_TYPE } from "../utils/transactions";
 import Button from "./Button";
 import TextView from "./TextView";
@@ -14,6 +16,7 @@ const DownIcon = Svg.down;
 const styles = StyleSheet.create({
   full: {
     flex: 1,
+    backgroundColor: '#10194E',
   },
   allTransactions: {
     fontSize: 16,
@@ -25,7 +28,6 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    marginTop: 24,
     marginBottom: 32,
   },
   sortRow: {
@@ -86,7 +88,7 @@ const MyTransaction = (props) => {
           </Button>
         </View>
       </View>
-      <FlatList
+      <BottomSheetFlatList
         data={mockData}
         keyExtractor={(it) => it.id.toString()}
         renderItem={renderItem}

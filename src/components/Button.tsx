@@ -1,3 +1,4 @@
+import React from "react";
 import { StyleSheet, TextProps, TouchableOpacity } from "react-native";
 import TextView from "./TextView";
 

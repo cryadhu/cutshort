@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
     marginLeft: 4,
   },
   evenRow: {
-    backgroundColor: "#10194E",
+    backgroundColor: "#192259",
   },
 });
 
