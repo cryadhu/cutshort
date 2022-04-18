@@ -13,9 +13,7 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     },
@@ -29,7 +27,8 @@
       "favicon": "./assets/favicon.png"
     },
     "packagerOpts": {
-      "config": "metro.config.js"
+      "config": "metro.config.js",
+      "sourceExts": ["js", "jsx", "json", "wasm", "svg"]
     }
   }
 }

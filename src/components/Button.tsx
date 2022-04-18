@@ -7,9 +7,10 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
     paddingHorizontal: 23,
     backgroundColor: "#ffff",
-    alignSelf: "baseline",
     borderRadius: 10,
     fontSize: 16,
+    justifyContent: "center",
+    alignItems: "center",
   },
   title: {
     lineHeight: 30,
@@ -17,10 +18,17 @@ const styles = StyleSheet.create({
 });
 
 const Button = (props) => {
-  const { title, titleStyle, style } = props;
+  const { title, titleStyle, style, children } = props;
   return (
-    <TouchableOpacity style={[styles.root, style]}>
-      <TextView style={[styles.title, titleStyle]}>{title}</TextView>
+    <TouchableOpacity
+      style={[!children && styles.root, style]}
+      activeOpacity={0.75}
+    >
+      {children ? (
+        children
+      ) : (
+        <TextView style={[styles.title, titleStyle]}>{title}</TextView>
+      )}
     </TouchableOpacity>
   );
 };

@@ -3,19 +3,17 @@ import colors from "../utils/color";
 import TextView from "./TextView";
 
 const styles = StyleSheet.create({
-  root: {
-    flex: 1,
-  },
+  root: {},
   title: {
     fontFamily: "InterBold",
     fontSize: 18,
     lineHeight: 30,
-    color: colors.white
+    color: colors.white,
   },
   description: {
     fontSize: 16,
     lineHeight: 24,
-    color: '#FAFAFA'
+    color: "#FAFAFA",
   },
 });
 

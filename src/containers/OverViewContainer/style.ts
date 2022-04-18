@@ -3,9 +3,8 @@ import colors from "../../utils/color";
 
 const styles = StyleSheet.create({
   root: {
-    height: "100%",
-    width: "100%",
     flexDirection: "row",
+    flex: 1,
   },
   viewPagerContainer: {
     backgroundColor: colors.colorPrimary,
@@ -14,8 +13,9 @@ const styles = StyleSheet.create({
     paddingRight: 50,
     paddingBottom: 20,
     paddingTop: 32,
-    flex: 1,
     borderTopRightRadius: 70,
+    marginRight: 52,
+    flex: 1,
   },
   introItem: {
     paddingBottom: 14,
@@ -26,6 +26,9 @@ const styles = StyleSheet.create({
   startBanking: {
     color: "#17288E",
     fontSize: 16,
+  },
+  startBankingButton: {
+    alignSelf: "baseline",
   },
 });
 
