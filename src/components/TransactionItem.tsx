@@ -11,6 +11,7 @@ const CurrencyIcon = Svg.currency;
 const styles = StyleSheet.create({
   root: {
     flexDirection: "row",
+    paddingVertical: 16,
   },
   nameContainer: {
     flex: 1,
@@ -20,7 +21,6 @@ const styles = StyleSheet.create({
     height: 48,
     width: 48,
     borderRadius: 24,
-    backgroundColor: "red",
   },
   name: {
     fontFamily: "InterBold",
@@ -54,6 +54,9 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontFamily: "InterBold",
     marginLeft: 4,
+  },
+  evenRow: {
+    backgroundColor: "#10194E",
   },
 });
 
@@ -91,12 +94,12 @@ const getTypeBg = (type: TRANSACTION_TYPE) => {
 };
 
 const TransactionItem = (props) => {
-  const { name, image, type, amount } = props;
+  const { name, image, type, amount, index, style } = props;
   const Icon = getIcon(type);
   return (
-    <View style={styles.root}>
+    <View style={[styles.root, index % 2 == 0 && styles.evenRow, style]}>
       <View>
-        <Image style={styles.image} />
+        <Image style={styles.image} source={image} />
       </View>
       <View style={styles.nameContainer}>
         <TextView style={styles.name}>{name}</TextView>

@@ -5,7 +5,6 @@ const styles = StyleSheet.create({
   root: {
     flex: 1,
     backgroundColor: colors.colorPrimaryDark,
-    paddingHorizontal: 16,
   },
   full: {
     flex: 1,
@@ -13,14 +12,17 @@ const styles = StyleSheet.create({
   balanceHeader: {
     color: "#E7E4E4",
     fontSize: 12,
+    marginLeft: 16,
   },
   amount: {
     marginTop: 16,
+    marginLeft: 16,
   },
   moneyButtonContainer: {
     flexDirection: "row",
     justifyContent: "space-between",
     marginTop: 32,
+    marginLeft: 16,
   },
   moneyButton: {
     flex: 1,
@@ -41,6 +43,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginTop: 24,
     marginBottom: 48,
+    marginHorizontal: 16,
   },
   name: {
     color: colors.white,
@@ -61,33 +64,8 @@ const styles = StyleSheet.create({
     color: "#426DDC",
     lineHeight: 24,
   },
-  allTransactions: {
-    fontSize: 16,
-    fontFamily: "InterBold",
-    color: "#ffff",
-    lineHeight: 24,
-  },
-  transactionHeader: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-    marginTop: 24,
-  },
-  sortRow: {
-    flexDirection: "row",
-    alignItems: "center",
-  },
-  sortBy: {
-    color: "#4E589F",
-  },
-  recent: {
-    color: "#DDD9D9",
-    marginLeft: 9,
-    marginRight: 8,
-  },
-  recentContainer: {
-    flexDirection: "row",
-    alignItems: "center",
+  transactions: {
+    paddingHorizontal: 16,
   },
 });
 
