@@ -19,11 +19,12 @@ const styles = StyleSheet.create({
 });
 
 const Button = (props) => {
-  const { title, titleStyle, style, children } = props;
+  const { title, titleStyle, style, children, onPress } = props;
   return (
     <TouchableOpacity
       style={[!children && styles.root, style]}
       activeOpacity={0.75}
+      onPress={onPress}
     >
       {children ? (
         children

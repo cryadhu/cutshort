@@ -8,6 +8,7 @@ import IntroItem from "../../components/IntroItem";
 import styles from "./style";
 
 const OverViewContainer = (props) => {
+  const { openHome } = props;
   return (
     <ImageBackground source={Images.intro} style={styles.root}>
       <View style={styles.viewPagerContainer}>
@@ -21,6 +22,7 @@ const OverViewContainer = (props) => {
           title="Start banking"
           titleStyle={styles.startBanking}
           style={styles.startBankingButton}
+          onPress={openHome}
         />
       </View>
     </ImageBackground>

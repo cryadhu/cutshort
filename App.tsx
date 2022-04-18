@@ -5,6 +5,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 import OverView from "./src/screens/OverView";
 import Home from "./src/screens/Home";
+import RootNavigation from "./src/navigation/RootNavigation";
 
 export default function App() {
   const [loaded] = useFonts({
@@ -17,7 +18,7 @@ export default function App() {
   }
   return (
     <SafeAreaView style={styles.container}>
-      <Home />
+      <RootNavigation />
     </SafeAreaView>
   );
 }
