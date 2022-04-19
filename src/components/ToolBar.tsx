@@ -5,6 +5,7 @@ import Svg from "../../assets/svg";
 import Button from "./Button";
 import TextView from "./TextView";
 import { ToolBarProps } from "../types/components/toolbar";
+import colors from "../utils/color";
 
 const styles = StyleSheet.create({
   root: {
@@ -13,6 +14,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     paddingLeft: 10,
     paddingRight: 16,
+    backgroundColor: colors.colorPrimaryDark,
   },
   backContainer: {
     flexDirection: "row",

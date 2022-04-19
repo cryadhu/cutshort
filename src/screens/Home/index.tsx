@@ -11,7 +11,11 @@ const Home = () => {
     navigation.navigate(NAVIGATION.NEW_REQUEST);
   };
 
-  return <HomeContainer requestMoney={requestMoney} />;
+  const sendMoney = () => {
+    navigation.navigate(NAVIGATION.SEND_MONEY);
+  };
+
+  return <HomeContainer requestMoney={requestMoney} sendMoney={sendMoney} />;
 };
 
 export default Home;

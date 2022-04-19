@@ -6,6 +6,7 @@ import OverView from "../screens/OverView";
 import Home from "../screens/Home";
 import { NAVIGATION } from "./helper";
 import NewRequest from "../screens/NewRequest";
+import SendMoney from "../screens/SendMoney";
 
 const Stack = createStackNavigator();
 
@@ -13,18 +14,10 @@ export default function RootNavigation() {
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
-        <Stack.Screen
-          name={NAVIGATION.OVERVIEW}
-          component={OverView}
-        />
-        <Stack.Screen
-          name={NAVIGATION.HOME}
-          component={Home}
-        />
-        <Stack.Screen
-          name={NAVIGATION.NEW_REQUEST}
-          component={NewRequest}
-        />
+        <Stack.Screen name={NAVIGATION.OVERVIEW} component={OverView} />
+        <Stack.Screen name={NAVIGATION.HOME} component={Home} />
+        <Stack.Screen name={NAVIGATION.NEW_REQUEST} component={NewRequest} />
+        <Stack.Screen name={NAVIGATION.SEND_MONEY} component={SendMoney} />
       </Stack.Navigator>
     </NavigationContainer>
   );

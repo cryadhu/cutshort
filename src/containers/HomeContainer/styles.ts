@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.colorPrimaryDark,
     paddingTop: 24,
   },
-  full: {
+  bottomContainer: {
     flex: 1,
   },
   balanceHeader: {
@@ -38,7 +38,6 @@ const styles = StyleSheet.create({
   header: {
     flexDirection: "row",
     alignItems: "center",
-    marginTop: 24,
     marginBottom: 48,
     marginHorizontal: 16,
   },
