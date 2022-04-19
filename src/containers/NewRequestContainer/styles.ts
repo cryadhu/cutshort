@@ -6,6 +6,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     paddingBottom: 73,
+    paddingTop: 24,
   },
   full: {
     flex: 1,
@@ -33,14 +34,14 @@ const styles = StyleSheet.create({
     borderRadius: 50,
   },
   name: {
-    color: "#EEEEEE",
+    color: colors.lightWhite,
     fontFamily: "InterBold",
     fontSize: 24,
     lineHeight: 32,
     marginTop: 24,
   },
   requesting: {
-    color: "#EEEEEE",
+    color: colors.lightWhite,
     fontSize: 14,
     lineHeight: 21,
     marginTop: 24,
@@ -51,7 +52,7 @@ const styles = StyleSheet.create({
     marginTop: 24,
   },
   amount: {
-    color: "#EEEEEE",
+    color: colors.lightWhite,
     fontFamily: "InterBold",
     fontSize: 40,
     lineHeight: 48,
@@ -76,7 +77,7 @@ const styles = StyleSheet.create({
     position: "absolute",
     left: 0,
     right: 0,
-    top: -187,
+    top: -163,
   },
   sendTitle: {
     color: colors.white,

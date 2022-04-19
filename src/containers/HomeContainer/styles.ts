@@ -5,6 +5,7 @@ const styles = StyleSheet.create({
   root: {
     flex: 1,
     backgroundColor: colors.colorPrimaryDark,
+    paddingTop: 24,
   },
   full: {
     flex: 1,
@@ -14,15 +15,11 @@ const styles = StyleSheet.create({
     fontSize: 12,
     marginLeft: 16,
   },
-  amount: {
-    marginTop: 16,
-    marginLeft: 16,
-  },
   moneyButtonContainer: {
     flexDirection: "row",
     justifyContent: "space-between",
     marginTop: 32,
-    marginLeft: 16,
+    marginHorizontal: 16,
   },
   moneyButton: {
     flex: 1,
@@ -82,6 +79,19 @@ const styles = StyleSheet.create({
     paddingTop: 16,
     paddingBottom: 24,
     marginBottom: -1,
+  },
+  amountContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginTop: 16,
+    marginLeft: 16,
+  },
+  amount: {
+    fontFamily: "InterBold",
+    fontSize: 40,
+    lineHeight: 48,
+    color: colors.lightWhite,
+    marginLeft: 8,
   },
 });
 

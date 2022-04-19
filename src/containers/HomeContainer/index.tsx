@@ -1,15 +1,18 @@
 import React, { useMemo } from "react";
 import { View } from "react-native";
 import BottomSheet from "@gorhom/bottom-sheet";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 import Svg from "../../../assets/svg";
 import Button from "../../components/Button";
 import MyTransaction from "../../components/MyTransaction";
 import TextView from "../../components/TextView";
 import styles from "./styles";
-import { GestureHandlerRootView } from "react-native-gesture-handler";
+import { HomeContainerProps } from "../../types/containers/homeContainer";
+import colors from "../../utils/color";
 
-const HomeContainer = () => {
+const HomeContainer = (props: HomeContainerProps) => {
+  const { requestMoney } = props;
   const snapPoints = useMemo(() => ["8%", "90%"], []);
 
   return (
@@ -26,12 +29,16 @@ const HomeContainer = () => {
         />
       </View>
       <TextView style={styles.balanceHeader}>Your current balance is</TextView>
-      <Svg.amount style={styles.amount} />
+      <View style={styles.amountContainer}>
+        <Svg.currency fill={colors.lightWhite} />
+        <TextView style={styles.amount}>200,000</TextView>
+      </View>
       <View style={styles.moneyButtonContainer}>
         <Button
           title="Request money"
           style={[styles.moneyButton, styles.requestButton]}
           titleStyle={styles.moneyTitle}
+          onPress={requestMoney}
         />
         <Button
           title="Send money"
@@ -43,6 +50,7 @@ const HomeContainer = () => {
         <BottomSheet
           index={1}
           snapPoints={snapPoints}
+          enableOverDrag={false}
           backgroundComponent={() => <View />}
           handleComponent={() => (
             <View style={styles.handle}>

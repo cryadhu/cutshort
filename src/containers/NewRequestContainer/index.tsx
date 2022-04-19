@@ -1,10 +1,12 @@
 import React from "react";
 import { Image, ScrollView, View } from "react-native";
+
 import Images from "../../../assets/images";
 import Svg from "../../../assets/svg";
 import Button from "../../components/Button";
 import TextView from "../../components/TextView";
 import { NewRequestContainerProps } from "../../types/containers/newRequestContainer";
+import colors from "../../utils/color";
 import { DEVICE_WIDTH, NEW_REQUEST_BG_RATIO } from "../../utils/constants";
 
 import styles from "./styles";
@@ -27,7 +29,7 @@ const NewRequestContainer = (props: NewRequestContainerProps) => {
         <TextView style={styles.name}>Adeleke Ramon</TextView>
         <TextView style={styles.requesting}>is requesting for:</TextView>
         <View style={styles.amountContainer}>
-          <Svg.currency fill="#EEEEEE" />
+          <Svg.currency fill={colors.lightWhite} />
           <TextView style={styles.amount}>200,000</TextView>
         </View>
         <Button

@@ -31,6 +31,10 @@ const styles = StyleSheet.create({
     right: 0,
     textAlign: "center",
   },
+  titleWithBack: {
+    left: 100,
+    right: 100,
+  },
 });
 
 const ToolBar = (props: ToolBarProps) => {
@@ -56,7 +60,11 @@ const ToolBar = (props: ToolBarProps) => {
   return (
     <WrapperView style={[styles.root, style]}>
       {back && <BackIcon />}
-      {title && <TextView style={styles.title}>{title}</TextView>}
+      {title && (
+        <TextView style={[styles.title, back && styles.titleWithBack]}>
+          {title}
+        </TextView>
+      )}
     </WrapperView>
   );
 };
