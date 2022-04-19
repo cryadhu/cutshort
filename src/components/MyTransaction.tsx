@@ -1,12 +1,10 @@
-import { BottomSheetFlatList } from "@gorhom/bottom-sheet";
 import React from "react";
-import { FlatList, StyleSheet, View } from "react-native";
-import Images from "../../assets/images";
+import { StyleSheet, View } from "react-native";
+import { BottomSheetFlatList } from "@gorhom/bottom-sheet";
 
+import Images from "../../assets/images";
 import Svg from "../../assets/svg";
 import mockData from "../mock/transactions.json";
-import colors from "../utils/color";
-import { TRANSACTION_TYPE } from "../utils/transactions";
 import Button from "./Button";
 import TextView from "./TextView";
 import TransactionItem from "./TransactionItem";
@@ -16,7 +14,7 @@ const DownIcon = Svg.down;
 const styles = StyleSheet.create({
   full: {
     flex: 1,
-    backgroundColor: '#10194E',
+    backgroundColor: "#10194E",
   },
   allTransactions: {
     fontSize: 16,

@@ -5,12 +5,17 @@ import Images from "../../../assets/images";
 import Button from "../../components/Button";
 import Indicator from "../../components/Indicator";
 import IntroItem from "../../components/IntroItem";
+import { OverViewContainerProps } from "../../types/containers/overViewContainer";
 import styles from "./style";
 
-const OverViewContainer = (props) => {
+const OverViewContainer = (props: OverViewContainerProps) => {
   const { openHome } = props;
   return (
-    <ImageBackground source={Images.intro} style={styles.root}>
+    <ImageBackground
+      source={Images.intro}
+      style={styles.root}
+      resizeMode="cover"
+    >
       <View style={styles.viewPagerContainer}>
         <Indicator length={3} currentItem={0} style={styles.indicator} />
         <IntroItem

@@ -1,6 +1,8 @@
 import React from "react";
 import { StyleSheet, View } from "react-native";
 
+import { IndicatorProps } from "../types/components/indicator";
+
 const styles = StyleSheet.create({
   root: {
     flexDirection: "row",
@@ -19,7 +21,7 @@ const styles = StyleSheet.create({
   },
 });
 
-const Indicator = (props) => {
+const Indicator = (props: IndicatorProps) => {
   const { length, currentItem, style } = props;
 
   const items = [];

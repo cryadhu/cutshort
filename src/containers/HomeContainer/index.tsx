@@ -9,9 +9,6 @@ import TextView from "../../components/TextView";
 import styles from "./styles";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 
-const AmountIcon = Svg.amount;
-const MenuIcon = Svg.menu;
-
 const HomeContainer = () => {
   const snapPoints = useMemo(() => ["8%", "90%"], []);
 
@@ -19,7 +16,7 @@ const HomeContainer = () => {
     <View style={styles.root}>
       <View style={styles.header}>
         <Button>
-          <MenuIcon />
+          <Svg.menu />
         </Button>
         <TextView style={styles.name}>Hello Sandra,</TextView>
         <Button
@@ -29,7 +26,7 @@ const HomeContainer = () => {
         />
       </View>
       <TextView style={styles.balanceHeader}>Your current balance is</TextView>
-      <AmountIcon style={styles.amount} />
+      <Svg.amount style={styles.amount} />
       <View style={styles.moneyButtonContainer}>
         <Button
           title="Request money"

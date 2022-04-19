@@ -1,4 +1,6 @@
 import { StyleSheet, View } from "react-native";
+
+import { IntroItemProps } from "../types/components/introItem";
 import colors from "../utils/color";
 import TextView from "./TextView";
 
@@ -17,7 +19,7 @@ const styles = StyleSheet.create({
   },
 });
 
-const IntroItem = (props) => {
+const IntroItem = (props: IntroItemProps) => {
   const { title, description, style } = props;
   return (
     <View style={[styles.root, style]}>

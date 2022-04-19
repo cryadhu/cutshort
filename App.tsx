@@ -1,21 +1,17 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
-import { useFonts } from "expo-font";
+import { StyleSheet } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-import OverView from "./src/screens/OverView";
-import Home from "./src/screens/Home";
 import RootNavigation from "./src/navigation/RootNavigation";
+import useCachedResources from "./src/hooks/useCachedResources";
 
 export default function App() {
-  const [loaded] = useFonts({
-    InterRegular: require("./assets/fonts/interRegular.ttf"),
-    InterBold: require("./assets/fonts/interBold.ttf"),
-  });
+  const resourcesLoaded = useCachedResources();
 
-  if (!loaded) {
+  if (!resourcesLoaded) {
     return null;
   }
+
   return (
     <SafeAreaView style={styles.container}>
       <RootNavigation />

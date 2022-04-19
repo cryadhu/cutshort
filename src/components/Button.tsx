@@ -1,5 +1,7 @@
 import React from "react";
-import { StyleSheet, TextProps, TouchableOpacity } from "react-native";
+import { StyleSheet, TouchableOpacity } from "react-native";
+import { ButtonProps } from "../types/components/button";
+
 import TextView from "./TextView";
 
 const styles = StyleSheet.create({
@@ -18,7 +20,7 @@ const styles = StyleSheet.create({
   },
 });
 
-const Button = (props) => {
+const Button = (props: ButtonProps) => {
   const { title, titleStyle, style, children, onPress } = props;
   return (
     <TouchableOpacity
@@ -26,11 +28,13 @@ const Button = (props) => {
       activeOpacity={0.75}
       onPress={onPress}
     >
-      {children ? (
-        children
-      ) : (
-        <TextView style={[styles.title, titleStyle]}>{title}</TextView>
-      )}
+      <>
+        {children ? (
+          children
+        ) : (
+          <TextView style={[styles.title, titleStyle]}>{title}</TextView>
+        )}
+      </>
     </TouchableOpacity>
   );
 };

@@ -2,6 +2,7 @@ import React from "react";
 import { Image, StyleSheet, View } from "react-native";
 
 import Svg from "../../assets/svg";
+import { TransactionItemProps } from "../types/components/transactionItem";
 import colors from "../utils/color";
 import { TRANSACTION_TYPE } from "../utils/transactions";
 import TextView from "./TextView";
@@ -93,7 +94,7 @@ const getTypeBg = (type: TRANSACTION_TYPE) => {
   }
 };
 
-const TransactionItem = (props) => {
+const TransactionItem = (props: TransactionItemProps) => {
   const { name, image, type, amount, index, style } = props;
   const Icon = getIcon(type);
   return (

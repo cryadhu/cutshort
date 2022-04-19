@@ -5,6 +5,8 @@ import error from "./error.svg";
 import received from "./recieved.svg";
 import sent from "./sent.svg";
 import currency from "./currency.svg";
+import requestBg from "./requestBg.svg";
+import back from "./back.svg";
 
 const Svg = {
   amount,
@@ -14,6 +16,8 @@ const Svg = {
   received,
   error,
   currency,
+  requestBg,
+  back,
 };
 
 export default Svg;
