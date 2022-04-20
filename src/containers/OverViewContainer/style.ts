@@ -26,6 +26,7 @@ const styles = StyleSheet.create({
   startBanking: {
     color: "#17288E",
     fontSize: 16,
+    fontFamily: "InterBold",
   },
   startBankingButton: {
     alignSelf: "baseline",
