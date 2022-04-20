@@ -9,14 +9,17 @@ import colors from "../../utils/color";
 const SendMoney = () => {
   const insets = useSafeAreaInsets();
 
+  const onSearch = (query: string) => {};
+
   return (
     <>
-      <StatusBar color={colors.colorPrimaryDark}/>
+      <StatusBar color={colors.colorPrimaryDark} />
       <ToolBar
         back
         style={{
           marginTop: insets.top,
         }}
+        onSearch={onSearch}
       />
       <SendMoneyContainer />
     </>

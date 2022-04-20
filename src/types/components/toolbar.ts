@@ -5,4 +5,5 @@ export type ToolBarProps = {
   title?: string;
   animated?: boolean;
   style?: StyleProp<ViewStyle> | Animated.AnimatedProps<unknown>;
+  onSearch?: (query: string) => void;
 };

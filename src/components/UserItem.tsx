@@ -1,6 +1,8 @@
 import React from "react";
 import { View, Image, StyleSheet } from "react-native";
+import { UserItemProps } from "../types/components/userItem";
 import colors from "../utils/color";
+import { getRandomImage } from "../utils/mock";
 import Button from "./Button";
 import TextView from "./TextView";
 
@@ -20,6 +22,8 @@ const styles = StyleSheet.create({
     width: 36,
     borderRadius: 18,
     backgroundColor: colors.white,
+    alignItems: "center",
+    justifyContent: "center",
   },
   selectedCircle: {
     height: 72,
@@ -38,13 +42,17 @@ const styles = StyleSheet.create({
   },
   image: {
     backgroundColor: colors.white,
-    flex: 1,
+    height: 32,
+    width: 32,
     borderRadius: 36,
-    margin: 4,
+  },
+  selectedImage: {
+    height: 64,
+    width: 64,
   },
 });
 
-const UserItem = (props) => {
+const UserItem = (props: UserItemProps) => {
   const { name, left, top, selected, index, style, onSelectUser } = props;
   return (
     <>
@@ -61,7 +69,10 @@ const UserItem = (props) => {
         onPress={() => onSelectUser(index)}
       >
         <View style={[styles.circle, selected && styles.selectedCircle]}>
-          <Image style={styles.image} source={{}} />
+          <Image
+            style={[styles.image, selected && styles.selectedImage]}
+            source={getRandomImage(index)}
+          />
         </View>
         <TextView style={[styles.name, selected && styles.selectedName]}>
           {name}

@@ -18,7 +18,7 @@ import colors from "../../utils/color";
 
 const HomeContainer = (props: HomeContainerProps) => {
   const { requestMoney, sendMoney } = props;
-  const snapPoints = useMemo(() => ["5%", "50%"], []);
+  const snapPoints = useMemo(() => [35, "50%"], []);
   const insets = useSafeAreaInsets();
   const bottomSheetModalRef = useRef<BottomSheetModal>(null);
 

@@ -1,6 +1,11 @@
 import React from "react";
 import { Image, StyleSheet, View } from "react-native";
+import {
+  SendMoneyUserViewProps,
+  UserProp,
+} from "../types/components/sendMoneyUser";
 import colors from "../utils/color";
+import { getRandomImage } from "../utils/mock";
 import Button from "./Button";
 import TextView from "./TextView";
 
@@ -38,13 +43,14 @@ const styles = StyleSheet.create({
   },
 });
 
-const SendMoneyUserView = (props) => {
-  const { user } = props;
+const SendMoneyUserView = (props: SendMoneyUserViewProps) => {
+  const { user, index } = props;
+
   return (
     <View style={styles.root}>
-      <Image source={{}} style={styles.image} />
-      <TextView style={styles.name}>{user.name}</TextView>
-      <TextView style={styles.phone}>{user.phone}</TextView>
+      <Image source={getRandomImage(index)} style={styles.image} />
+      <TextView style={styles.name}>{user?.name}</TextView>
+      <TextView style={styles.phone}>{user?.phone}</TextView>
       <Button
         title="Continue"
         style={styles.button}

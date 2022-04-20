@@ -29,6 +29,7 @@ const styles = StyleSheet.create({
   },
   startBankingButton: {
     alignSelf: "baseline",
+    paddingHorizontal: 23,
   },
 });
 

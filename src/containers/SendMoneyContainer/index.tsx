@@ -4,12 +4,12 @@ import { GestureHandlerRootView } from "react-native-gesture-handler";
 import {
   BottomSheetModal,
   BottomSheetModalProvider,
+  SCREEN_WIDTH,
 } from "@gorhom/bottom-sheet";
 
 import styles from "./style";
 import users from "../../mock/users.json";
 import UserItem from "../../components/UserItem";
-import { SCREEN_WIDTH } from "@gorhom/bottom-sheet";
 import SendMoneyUserView from "../../components/SendMoneyUserView";
 
 const unSelectedCr = 18;
@@ -34,7 +34,7 @@ const getPosition = (index: number) => {
 
 const SendMoneyContainer = () => {
   const [selectedIndex, setSelectedIndex] = useState(-1);
-  const snapPoints = useMemo(() => ["5%", "40%"], []);
+  const snapPoints = useMemo(() => [35, 320], []);
   const bottomSheetModalRef = useRef<BottomSheetModal>(null);
 
   const onSelectUser = (index: number) => {
@@ -79,7 +79,8 @@ const SendMoneyContainer = () => {
             )}
           >
             <SendMoneyUserView
-              user={selectedIndex > -1 ? users[selectedIndex] : {}}
+              user={selectedIndex > -1 ? users[selectedIndex] : null}
+              index={selectedIndex}
             />
           </BottomSheetModal>
         </GestureHandlerRootView>

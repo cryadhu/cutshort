@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
   root: {
     fontFamily: "InterRegular",
     paddingVertical: 12,
-    paddingHorizontal: 23,
+    paddingHorizontal: 12,
     backgroundColor: "#ffff",
     borderRadius: 10,
     fontSize: 16,
